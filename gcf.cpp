@@ -21,8 +21,11 @@ int main() {
     std::cin >> thirdNumStr;
     // Convert the string inputs to integers
     try {
+        // Casting the string inputs to integer
         firstNumInt = std::stoi(firstNumStr);
+        // Casting the string inputs to integer
         secondNumInt = std::stoi(secondNumStr);
+        // Casting the string inputs to integer
         thirdNumInt = std::stoi(thirdNumStr);
         if (firstNumInt <= secondNumInt && firstNumInt <= thirdNumInt) {
             smallest = firstNumInt;
