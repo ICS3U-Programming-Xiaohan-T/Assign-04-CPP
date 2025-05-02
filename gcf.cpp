@@ -27,21 +27,31 @@ int main() {
         secondNumInt = std::stoi(secondNumStr);
         // Casting the string inputs to integer
         thirdNumInt = std::stoi(thirdNumStr);
+        // Find the smallest number
+        // If the first number is smaller than the second and third numbers, then it is the smallest
         if (firstNumInt <= secondNumInt && firstNumInt <= thirdNumInt) {
+            // Assign the first number to the smallest variable
             smallest = firstNumInt;
+        // If the second number is smaller than the first and third numbers, then it is the smallest
         } else if (secondNumInt <= firstNumInt && secondNumInt <= thirdNumInt) {
+            // Assign the second number to the smallest variable
             smallest = secondNumInt;
         } else {
+            
             smallest = thirdNumInt;
         } 
         // Find the GCF of the three numbers
+        // Set a counter
         for (int counter = smallest; counter > 0; counter--) {
+        // Check if the counter is a factor of all three numbers
             if (firstNumInt % counter == 0 && secondNumInt % counter == 0 && thirdNumInt % counter == 0) {
+                // If it is, then it is the GCF, and display it
                 std::cout << "The GCF of " << firstNumInt << ", " << secondNumInt << ", and " << thirdNumInt << " is: " << counter << std::endl;
+                // Break the loop since the GCF is found
                 break;
         }
         }
-        // Display the GCF of the three numbers
+    // The exceptions
     } catch (std::invalid_argument const &e) {
         // Exceptions where enter an invalid input
         std::cout << "Invalid input, please try again." << std::endl;
