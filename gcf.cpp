@@ -9,7 +9,7 @@
 int main() {
     // Display welcoming message
     std::cout << "Hello! Welcome to this program!" << std::endl;
-
+    // Declear the variables.
     std::string firstNumStr, secondNumStr, thirdNumStr;
     std::string playAgain;
     // Declare variables to hold converted integers
@@ -17,11 +17,17 @@ int main() {
 
     while (true) {
         // Get input from the user and store it to the related variable
+        // Get the first number from the user
         std::cout << "Please enter the first number as an integer: ";
+        // Store the input in a string variable
         std::cin >> firstNumStr;
+        // Get the second number from the user
         std::cout << "Please enter the second number as an integer: ";
+        // Store the input in a string variable
         std::cin >> secondNumStr;
+        // Get the third number from the user
         std::cout << "Please enter the third number as an integer: ";
+        // Store the input in a string variable
         std::cin >> thirdNumStr;
 
         try {
@@ -70,8 +76,7 @@ int main() {
             // The exceptions
         } catch (std::invalid_argument const &e) {
             // Exceptions where enter an invalid input
-            std::cout << "Invalid input, please try again." << std::endl;
-            continue;  // Ask again without prompting to play again
+            std::cout << "Invalid input. Please enter an integer" << std::endl;
         }
 
         // Ask if the user wants to play again
